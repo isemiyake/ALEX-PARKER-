@@ -15,15 +15,15 @@
                     <div class="post-title">
                       <a href="#"
                         ><h1>
-                          <?php echo $post['post_title'] ?>
+                          <?php echo $post['post_title']; ?>
                         </h1></a
                       >
                     </div>
                     <div class="post-info">
-                      <span><?php echo $post['post_created_at'] ?></span> | <span><?php echo $post['category_name'] ?></span>
+                      <span><?php echo $post['post_created_at']; ?></span> | <span><?php echo $post['category_name'] ;?></span>
                     </div>
                     <p>
-                      <?php echo $post['post_text'] ?>
+                      <?php echo \Core\Helpers\truncate($post['post_text']); ?>
                     </p>
                     <a
                       href="#"
