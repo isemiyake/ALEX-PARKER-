@@ -16,23 +16,25 @@
                       <a href="#"
                         ><h1>
                           <?php echo $post['post_title']; ?>
-                        </h1></a
-                      >
+                        </h1>
+                      </a>
                     </div>
                     <div class="post-info">
-                      <span><?php echo $post['post_created_at']; ?></span> | <span><?php echo $post['category_name'] ;?></span>
+                      <span>
+                        <?php echo \Core\Helpers\format($post['post_created_at']);?>
+                      </span> 
+                      | 
+                      <span>
+                        <?php echo $post['category_name'] ;?>
+                      </span>
                     </div>
                     <p>
                       <?php echo \Core\Helpers\truncate($post['post_text']); ?>
                     </p>
                     <a
                       href="#"
-                      class="
-                        button button-style button-anim
-                        fa fa-long-arrow-right
-                      "
-                      ><span>Read More</span></a
-                    >
+                      class="button button-style button-anim fa fa-long-arrow-right"
+                      ><span>Read More</span></a>
                   </div>
               
                    <?php endforeach; ?>

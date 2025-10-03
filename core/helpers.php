@@ -1,4 +1,5 @@
 <?php 
+//Truncate texte
     namespace Core\Helpers;
  function truncate (string $string,int $lg_max=150):string {
     if (strlen($string) > $lg_max):
@@ -8,4 +9,9 @@
     endif;
     return $string;
     }
+    function format(string $dateString, string $format = "Y/m/d"): string {
+    $date = date_create($dateString);  
+    return $date ? date_format($date, $format) : ""; 
+}
 ?>
+
