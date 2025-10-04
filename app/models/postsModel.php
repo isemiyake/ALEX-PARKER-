@@ -20,4 +20,3 @@ function findAll(\PDO $connexion):array{
         $rs->execute();
     return $rs->fetch(\PDO::FETCH_ASSOC);
 }
-?>

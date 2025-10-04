@@ -9,9 +9,12 @@
     endif;
     return $string;
     }
-    function format(string $dateString, string $format = "Y/m/d"): string {
+    function formate(string $dateString, string $format = "M d, Y"): string {
     $date = date_create($dateString);  
     return $date ? date_format($date, $format) : ""; 
-}
-?>
+    }
+     function format(string $dateString, string $format = "Y-m-d"): string {
+    $date = date_create($dateString);  
+    return $date ? date_format($date, $format) : ""; 
+    }
 

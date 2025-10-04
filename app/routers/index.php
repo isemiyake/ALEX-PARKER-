@@ -5,8 +5,8 @@
 // Controleur: postController
 // Action: showAction
 if(isset($_GET['post_id'])):
-include_once '../app/controllers/postController.php';
-\App\Controllers\PostController\showAction($connexion, $_GET['post_id']);
+include_once '../app/controllers/postsController.php';
+\App\Controllers\PostsController\showAction($connexion, $_GET['post_id']);
 // Route par defaut
 // Pattern: /
 // Controleur: pagesController

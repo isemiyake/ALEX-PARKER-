@@ -25,7 +25,7 @@
 
                     <!-- Post Detail Start -->
                     <div class="post-info">
-                      <span><?php echo \Core\Helpers\format($post['post_created_at']);?></span> | <span><?php echo $post['category_name']; ?></span>
+                      <span><?php echo \Core\Helpers\formate($post['post_created_at']);?></span> | <span><?php echo $post['category_name']; ?></span>
                     </div>
                     <!-- Post Detail End -->
 

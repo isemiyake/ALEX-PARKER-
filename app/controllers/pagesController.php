@@ -1,10 +1,10 @@
 <?php
 namespace App\Controllers\PagesController;
-
+use \App\Models\PostsModel;
 function  blogAction(\PDO $connexion){
    // je demande les data au modeles
      include_once '../app/models/postsModel.php';
-     $posts = \App\Models\PostsModel\findAll($connexion);
+     $posts = PostsModel\findAll($connexion);
    // je charge la vue 'blog' dans $content
    global $content,$title;
    $title = "Blog";

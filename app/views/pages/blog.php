@@ -13,7 +13,7 @@
                   <!-- Blog Post Start -->
                   <div class="col-md-12 blog-post row">
                     <div class="post-title">
-                      <a href="#"
+                      <a href="?post_id=<?php echo $post['post_id']; ?>"
                         ><h1>
                           <?php echo $post['post_title']; ?>
                         </h1>

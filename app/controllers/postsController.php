@@ -1,9 +1,10 @@
 <?php 
-namespace App\Controllers\PostController;
+namespace App\Controllers\PostsController;
+use \App\Models\PostsModel;
 function showAction(\PDO $connexion ,int $id){
    // je demande les data au modeles
      include_once '../app/models/postsModel.php';
-     $post = \App\Models\PostsModel\findOneById($connexion, $id);
+     $post = PostsModel\findOneById($connexion, $id);
    // je charge la vue 'Post' dans $content
    global $content,$title;
    $title = "Title du post";
@@ -11,4 +12,3 @@ function showAction(\PDO $connexion ,int $id){
    include '../app/views/pages/show.php';
    $content=ob_get_clean();
 }
-?>
