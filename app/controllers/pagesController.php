@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers\PagesController;
-use \PDO;
-function  blogAction(PDO $connexion){
+
+function  blogAction(\PDO $connexion){
    // je demande les data au modeles
      include_once '../app/models/postsModel.php';
      $posts = \App\Models\PostsModel\findAll($connexion);

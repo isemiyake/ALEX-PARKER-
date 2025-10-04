@@ -1,9 +1,17 @@
 <?php
 // Router principal
-
+// ROUTE DU DETAIL D'UN POST
+// Pattern: /?post_id=id
+// Controleur: postController
+// Action: showAction
+if(isset($_GET['post_id'])):
+include_once '../app/controllers/postController.php';
+\App\Controllers\PostController\showAction($connexion, $_GET['post_id']);
 // Route par defaut
 // Pattern: /
 // Controleur: pagesController
 // Action: blogAction
-include_once '../app/controllers/pagesControllers.php';
+else:
+include_once '../app/controllers/pagesController.php';
 \App\Controllers\PagesController\blogAction($connexion);
+endif;

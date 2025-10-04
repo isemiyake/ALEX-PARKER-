@@ -32,7 +32,7 @@
                       <?php echo \Core\Helpers\truncate($post['post_text']); ?>
                     </p>
                     <a
-                      href="#"
+                      href="?post_id=<?php echo $post['post_id']; ?>"
                       class="button button-style button-anim fa fa-long-arrow-right"
                       ><span>Read More</span></a>
                   </div>
