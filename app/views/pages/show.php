@@ -1,7 +1,7 @@
 <div class="col-md-12 page-body">
               <div class="row">
                 <div class="sub-title">
-                  <a href="./" title="Go to Home Page"
+                  <a href="index.php" title="Go to Home Page"
                     ><h2>Back Home</h2></a
                   >
                   <a href="#comment" class="smoth-scroll"
@@ -43,16 +43,13 @@
 
                     <!-- Post Buttons -->
                     <div>
-                      <a href="form.html" type="button" class="btn btn-primary"
+                      <a href="?edit&id=<?php echo $post['post_id']; ?>" type="button" class="btn btn-primary"
                         >Edit Post</a
                       >
-                      <a
-                        href="#"
+                     <a href="?delete&id=<?php echo $post['post_id']; ?>"
                         type="button"
                         class="btn btn-secondary"
-                        role="button"
-                        >Delete Post</a
-                      >
+                        role="button">Delete Post</a>
                     </div>
                     <!-- Post Buttons End -->
                   </div>
