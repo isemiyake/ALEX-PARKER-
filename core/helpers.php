@@ -17,8 +17,7 @@
     $date = date_create($dateString);  
     return $date ? date_format($date, $format) : ""; 
     }
-    function slugify(string $text): string
-{
+    function slugify(string $text): string{
     // Strip html tags
     $text = strip_tags($text);
     // Replace non letter or digits by -

@@ -3,6 +3,7 @@
 // Initialisation des zones dynamiques
 $title = '';
 $content = '';
+// Initialisation redirection a l'acceuil
 define('BASE_URL','http://localhost:8888/ALEX%20PARKER%20/public/');
 // Parametres de connexion a la DB
 define('DB_HOST','localhost:8889');

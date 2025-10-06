@@ -8,7 +8,7 @@ function showAction(\PDO $connexion ,int $id){
    $post = PostsModel\findOneById($connexion, $id);
    // je charge la vue 'Post' dans $content
    global $content,$title;
-   $title = "Title du post";
+   $title = "$post[post_title]";
    ob_start();
    include '../app/views/pages/show.php';
    $content=ob_get_clean();
