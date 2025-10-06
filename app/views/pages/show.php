@@ -1,7 +1,7 @@
 <div class="col-md-12 page-body">
               <div class="row">
                 <div class="sub-title">
-                  <a href="index.php" title="Go to Home Page"
+                  <a href="" title="Go to Home Page"
                     ><h2>Back Home</h2></a
                   >
                   <a href="#comment" class="smoth-scroll"
@@ -43,15 +43,22 @@
 
                     <!-- Post Buttons -->
                     <div>
-                      <a href="?edit&id=<?php echo $post['post_id']; ?>" type="button" class="btn btn-primary"
+                      <?php $slug = \Core\Helpers\slugify($post['post_title']);?>
+                      <a href="posts/<?php echo $post['post_id']; ?>/<?php echo $slug; ?>/edit/form.html" type="button" class="btn btn-primary"
                         >Edit Post</a
                       >
-                     <a href="?delete&id=<?php echo $post['post_id']; ?>"
+                     <a href="posts/<?php echo $post['post_id']; ?>/<?php echo $slug; ?>/delete.html"
                         type="button"
                         class="btn btn-secondary"
                         role="button">Delete Post</a>
                     </div>
                     <!-- Post Buttons End -->
+                     <div id="scroll-down-popup" class="endpage-box">
+                    <h4>Read Also</h4>
+                    <a href="#"
+                      >How to make your company website based on bootstrap framework...</a
+                    >
+                  </div>
                   </div>
                 </div>
               </div>

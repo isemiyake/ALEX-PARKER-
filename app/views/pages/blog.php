@@ -3,17 +3,17 @@
                 <div class="col-md-12 content-page">
                   <!-- ADD A POST -->
                   <div>
-                    <a href="?addForm" type="button" class="btn btn-primary"
+                    <a href="posts/add/form.html" type="button" class="btn btn-primary"
                       >Add a Post</a
                     >
                   </div>
                   <!-- ADD A POST END -->
                   <?php foreach($posts as $post): ?>
-          
+                  <?php $slug = \Core\Helpers\slugify($post['post_title']); ?>
                   <!-- Blog Post Start -->
                   <div class="col-md-12 blog-post row">
                     <div class="post-title">
-                      <a href="?post_id=<?php echo $post['post_id']; ?>"
+                      <a href="posts/<?php echo $post['post_id']; ?>/<?php echo $slug; ?>.html"
                         ><h1>
                           <?php echo $post['post_title']; ?>
                         </h1>
@@ -32,7 +32,7 @@
                       <?php echo \Core\Helpers\truncate($post['post_text']); ?>
                     </p>
                     <a
-                      href="?post_id=<?php echo $post['post_id']; ?>"
+                      href="posts/<?php echo $post['post_id']; ?>/<?php echo $slug; ?>.html"
                       class="button button-style button-anim fa fa-long-arrow-right"
                       ><span>Read More</span></a>
                   </div>

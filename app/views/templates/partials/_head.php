@@ -11,7 +11,7 @@
     <meta name="robots" content="index,follow" />
 
     <title>Alex Parker - <?php echo $title;?> </title>
-
+    <base href="<?php echo BASE_URL;?>" target="_top">
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon/favicon.ico" />
     <link

@@ -1,7 +1,7 @@
 <div class="col-md-12 page-body">
               <div class="row">
                 <div class="sub-title">
-                  <a href="index.php" title="Go to Home Page"
+                  <a href="" title="Go to Home Page"
                     ><h2>Back Home</h2></a
                   >
                   <a href="#comment" class="smoth-scroll"
@@ -18,7 +18,7 @@
                     <!-- Post Headline End -->
 
                     <!-- Form Start -->
-                    <form action="?insert " method="post">
+                    <form action="posts/add/insert.html" method="post">
                       <div class="form-group">
                         <label for="title">Title</label>
                         <input
@@ -27,6 +27,7 @@
                           id="title"
                           class="form-control"
                           placeholder="Enter your title here"
+                          required
                         />
                       </div>
                       <div class="form-group">
@@ -37,6 +38,7 @@
                           class="form-control"
                           rows="5"
                           placeholder="Enter your text here"
+                          required
                         ></textarea>
                       </div>
                       <div class="form-group">
@@ -51,16 +53,19 @@
                           class="form-control"
                           rows="5"
                           placeholder="Enter your quote here"
+                          required
                         ></textarea>
                       </div>
                       <div class="form-group">
                         <label for="text">Category</label>
                         <select
+                        
                           id="category"
                           name="category_id"
                           class="form-control"
+                          required
                         >
-                          <option disabled selected>
+                          <option value ="" disabled selected>
                             Select your category
                           </option>
                     <?php include_once '../app/models/categoriesModel.php';
