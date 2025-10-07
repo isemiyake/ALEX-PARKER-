@@ -43,7 +43,8 @@
 
                     <!-- Post Buttons -->
                     <div>
-                      <?php $slug = \Core\Helpers\slugify($post['post_title']);?>
+                      <?php
+                      $slug = \Core\Helpers\slugify($post['post_title']);?>
                       <a href="posts/<?php echo $post['post_id']; ?>/<?php echo $slug; ?>/edit/form.html" type="button" class="btn btn-primary"
                         >Edit Post</a
                       >

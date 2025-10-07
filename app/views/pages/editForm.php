@@ -62,7 +62,7 @@
                           name="category_id"
                           class="form-control"
                         >
-                          <option selected>
+                          <option selected value="<?php echo $post['category_id']; ?>">
                             <?php echo $post['category_name']; ?>
                           </option>
                               <?php include_once '../app/models/categoriesModel.php';
