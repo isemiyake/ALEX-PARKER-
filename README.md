@@ -1,6 +1,6 @@
 # ALEX PARKER
 
-Une application en PHP MVC procedural
+Une application de type blog en PHP MVC procedural
 - PHP
 - MVC 
 - Procedural 
